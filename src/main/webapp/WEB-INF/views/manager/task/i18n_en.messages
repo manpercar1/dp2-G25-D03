@@ -1,0 +1,27 @@
+manager.task.list.label.title = Title
+manager.task.list.label.description = Description
+manager.task.list.label.info = Info
+manager.task.list.button.sortId = Sort by ID
+manager.task.list.button.sortExecutionPeriod = Sort by execution period
+manager.task.list.button.sortWorkload = Sort by workload
+
+manager.task.form.label.title = Title
+manager.task.form.label.description = Description
+manager.task.form.label.startExecution = Start Execution
+manager.task.form.label.endExecution = End Execution
+manager.task.form.label.workload = Workload
+manager.task.form.label.info = Info
+manager.task.form.label.isPrivate = Private
+manager.task.form.button.return = Return
+manager.task.form.button.submit = Submit
+manager.task.form.button.update = Update
+manager.task.form.button.delete = Delete
+manager.task.form.label.newStatus = New status:
+manager.task.form.label.isFinished = Finished:
+manager.task.form.label.newFinished = Finished status:
+Private = Private
+Public = Public
+true = Yes
+false = No
+YES = Yes
+NO = No

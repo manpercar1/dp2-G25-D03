@@ -1,0 +1,4 @@
+threshold,words,credentialsUsername,credentialsPassword
+threshold=15.00,"anonymous person tries to change something he is not allowed to, security kicking in","anonymous","anonymous"
+threshold=50.00,"this is an illegal action, must be declined at all costs","manager","manager"
+threshold=70.00,"this is dummy authenticated user, he is not allowed to make these words count as spam","authenticated1","authenticated1"

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- initial-data.xml
+-
+- Copyright (C) 2012-2021 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>
+	
+	<!-- Anonymous user -->
+
+	<bean name="anonymousUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="anonymous" />
+		<property name="password" value="anonymous" />
+		<property name="enabled" value="false" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="John" />
+				<property name="surname" value="Doe" />
+				<property name="email" value="john.doe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="anonymousAnonymous" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="anonymousAnonymous" class="acme.framework.entities.Anonymous">
+		<property name="userAccount" ref="anonymousUserAccount" />
+	</bean>
+	
+	
+	<!-- Manager -->
+	
+	<bean name="managerUserAccount0" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager0" />
+		<property name="password" value="manager0" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Manager0" />
+				<property name="surname" value="Acme0.com" />
+				<property name="email" value="manager0@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="managerManager0" />
+				<ref bean="managerAuthenticated0" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="managerManager0" class="acme.framework.entities.Manager">
+		<property name="userAccount" ref="managerUserAccount0" />
+	</bean>
+	
+	<bean name="managerAuthenticated0" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="managerUserAccount0" />
+	</bean>
+	
+	
+	<!-- Authenticated  -->
+
+	<bean  name="authenticatedUserAccount0" class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated0" />
+		<property name="password" value="authenticated0" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Pedro" />
+				<property name="surname" value="Ceballos" />
+				<property name="email" value="pedceb@gmail.com" />
+			</bean>
+		</property>
+ 		<property name="roles">
+			<list>            
+				<ref bean="authenticatedAuthenticated0" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticatedAuthenticated0" class="acme.framework.entities.Authenticated">
+			<property name="userAccount" ref="authenticatedUserAccount0" />
+	</bean>
+	
+	
+	<!-- Administrator -->
+	
+	<bean name="administratorUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="administrator" />
+		<property name="password" value="administrator" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Administrator" />
+				<property name="surname" value="Acme.com" />
+				<property name="email" value="administrator@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="administratorAdministrator" />
+				<ref bean="administratorAuthenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="administratorAdministrator" class="acme.framework.entities.Administrator">
+		<property name="userAccount" ref="administratorUserAccount" />
+	</bean>
+	
+	<bean name="administratorAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="administratorUserAccount" />
+	</bean>
+	
+	
+	<!-- Tasks -->
+	
+	<bean id="task03" class="acme.entities.tasks.Task">
+		<property name="title" value="Customize your webpage"/>
+		<property name="description" value="Try some cool stuff"/>
+		<property name="startExecution" value="2022/07/03 12:33"/>
+		<property name="endExecution" value="2023/02/11 10:46"/>
+		<property name="workload" value="98.59"/>
+		<property name="info" value="http://www.example.org"/>
+		<property name="userAccount"> <ref bean="administratorUserAccount"/></property>
+		<property name="isPrivate" value="true"></property>
+		<property name="isFinished" value="true"></property>
+	</bean>
+	
+	<bean id="task08" class="acme.entities.tasks.Task">
+		<property name="title" value="Test1"/>
+		<property name="description" value="Another test"/>
+		<property name="startExecution" value="2022/07/05 15:33"/>
+		<property name="endExecution" value="2022/08/11 09:46"/>
+		<property name="workload" value="80.59"/>
+		<property name="info" value="http://www.example.org"/>
+		<property name="userAccount"> <ref bean="administratorUserAccount"/></property>
+		<property name="isPrivate" value="true"></property>
+		<property name="isFinished" value="true"></property>
+	</bean>
+
+	<bean id="task09" class="acme.entities.tasks.Task">
+		<property name="title" value="Test2"/>
+		<property name="description" value="Another test"/>
+		<property name="startExecution" value="2022/07/18 16:33"/>
+		<property name="endExecution" value="2023/02/15 08:46"/>
+		<property name="workload" value="89.59"/>
+		<property name="info" value="http://www.example.org"/>
+		<property name="userAccount"> <ref bean="administratorUserAccount"/></property>
+		<property name="isPrivate" value="true"></property>
+		<property name="isFinished" value="true"></property>
+	</bean>
+	
+	
+	<!-- Shouts -->
+	
+	<bean id="shout00" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/23 07:01"/>
+		<property name="author" value="Elena"/>
+		<property name="text" value="Tengo sueño"/>
+		<property name="info"><null/></property>	
+	</bean>
+	
+	
+	<!-- Spam -->
+	
+	<bean id="spam01" class="acme.entities.spam.Spam">
+		<property name="words" value="sex, hardcore, viagra, cialis, nigeria, you’ve won, million dollar, sexo, duro, viagra, cialis, nigeria, has ganado, 1 millón de dólares, 1 millon de dolares, un millón de dólares , un millon de dolares"/>
+		<property name="threshold" value="10"/>
+	</bean>
+	
+</beans>

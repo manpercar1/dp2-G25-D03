@@ -1,0 +1,13 @@
+administrator.dashboard.form.title.general-indicators = General indicators
+administrator.dashboard.form.label.total-public-tasks = Total number of public tasks
+administrator.dashboard.form.label.total-private-tasks = Total number of private tasks
+administrator.dashboard.form.label.total-finished-tasks = Total number of finished tasks
+administrator.dashboard.form.label.total-non-finished-tasks = Total number of non-finished tasks
+administrator.dashboard.form.label.average-task-execution-periods = Average task execution periods (days)
+administrator.dashboard.form.label.deviation-task-execution-periods = Deviation task execution periods (days)
+administrator.dashboard.form.label.minimum-task-execution-periods = Minimum task execution periods (days)
+administrator.dashboard.form.label.maximum-task-execution-periods = Maximum task execution periods (days)
+administrator.dashboard.form.label.average-task-workloads = Average task workloads (hours and minutes)
+administrator.dashboard.form.label.deviation-task-workloads = Deviation task workloads (hours and minutes)
+administrator.dashboard.form.label.minimum-task-workloads = Minimum task workloads (hours and minutes)
+administrator.dashboard.form.label.maximum-task-workloads = Maximum task workloads (hours and minutes)

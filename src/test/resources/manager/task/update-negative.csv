@@ -1,0 +1,3 @@
+recordIndex,title,description,info,startExecution,endExecution,workload,status,finished,newTitle,newDescription,newInfo,newStartExecution,newEndExecution,newWorkload,newStatus,newFinished
+0,Test 1,Another test,http://www.example.org,2021/07/07 22:33,2022/02/11 07:46,98.59,true,true,Customize your webpage sex,,http://www.exampleOne.org,mañana,,99.595,true,true
+1,Test 2,Another test,http://www.example.org,2021/08/05 22:33,2022/02/15 09:46,85.59,true,true,,Another test sex,info de prueba,,2021/01/13 09:46,-10.58,false,true

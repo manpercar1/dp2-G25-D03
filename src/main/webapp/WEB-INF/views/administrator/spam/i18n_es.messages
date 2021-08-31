@@ -1,0 +1,4 @@
+administrator.spam.form.label.words = Palabras marcadas como spam
+administrator.spam.form.label.threshold = Umbral
+administrator.spam.form.button.return = Volver
+administrator.spam.form.button.update = Actualizar

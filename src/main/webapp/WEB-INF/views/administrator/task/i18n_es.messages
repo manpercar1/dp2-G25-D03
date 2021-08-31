@@ -1,0 +1,25 @@
+administrator.task.list.label.title = Título
+administrator.task.list.label.description = Descripción
+administrator.task.list.label.info = Info
+administrator.task.list.button.sortId = Ordenar por ID
+administrator.task.list.button.sortExecutionPeriod = Ordenar por periodo de ejecución
+administrator.task.list.button.sortWorkload = Ordenar por carga de trabajo
+
+administrator.task.form.label.title = Título
+administrator.task.form.label.description = Descripción
+administrator.task.form.label.startExecution = Inicio de ejecución
+administrator.task.form.label.endExecution = Fin de ejecución
+administrator.task.form.label.workload = Carga de trabajo
+administrator.task.form.label.info = Info
+administrator.task.form.label.isPrivate = Privado
+administrator.task.form.button.return = Volver
+administrator.task.form.button.submit= Enviar
+administrator.task.form.button.update = Actualizar
+administrator.task.form.button.delete = Eliminar
+administrator.task.form.label.newStatus = Nuevo estado:
+administrator.task.form.label.isFinished = Terminada:
+administrator.task.form.label.newFinished = Nuevo estado:
+Private = Privado
+Public = Publico
+YES = Sí
+NO = No
