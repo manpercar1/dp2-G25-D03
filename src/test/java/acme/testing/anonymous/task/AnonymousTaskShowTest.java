@@ -55,7 +55,7 @@ public class AnonymousTaskShowTest  extends AcmePlannerTest {
 	@Order(11)
 	public void showTaskNegative(final int id) {
 		
-		this.driver.get("http://localhost:8050/Acme-Planner/administrator/task/list?language=en&debug=true&id=" + id);
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/administrator/task/list?language=en&debug=true&id=" + id);
 		super.checkErrorsExist();
 		
 	}

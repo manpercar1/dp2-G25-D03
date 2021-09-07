@@ -328,7 +328,7 @@ Task
 + description: String {NotBlank, Length(1,500)}
 + startExecution: Date {NotNull, Temporal(TIMESTAMP), Future}
 + endExecution: Date {NotNull, Temporal(TIMESTAMP), Future}
-+ workload: BigDecimal {NotNull, Digits(integer = 8, fraction = 2), DecimalMin(value="0.0", inclusive=true)}
++ workload: BigDecimal {NotNull, Digits(integer = 2, fraction = 2), DecimalMin(value="0.0", inclusive=true)}
 + info: String {URL}
 + isPrivate: boolean {NotNull}
 + isFinished: boolean {NotNull}

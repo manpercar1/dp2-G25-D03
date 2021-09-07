@@ -23,3 +23,5 @@ Private = Privado
 Public = Publico
 YES = Sí
 NO = No
+
+administrator.task.error.fecha = Fecha incorrecta
