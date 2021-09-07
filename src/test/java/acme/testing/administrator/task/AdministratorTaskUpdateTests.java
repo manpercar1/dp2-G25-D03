@@ -109,7 +109,7 @@ public class AdministratorTaskUpdateTests extends AcmePlannerTest{
 	@Order(15)
 	public void updateNegativeTwo(final String id) {
 		super.signIn("administrator2", "administrator2");
-		this.driver.get("http://localhost:8050/Acme-Planner/administrator/task/update?language=en&debug=true&id=" + id);
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/administrator/task/update?language=en&debug=true&id=" + id);
 		
 		super.checkErrorsExist();
 		

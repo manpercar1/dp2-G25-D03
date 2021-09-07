@@ -61,11 +61,11 @@ public class SpamShowTest extends AcmePlannerTest{
 	public void showNotAuthorised(final String credentialsUsername, final String credentialsPassword) {
 		
 		if(credentialsUsername.contains("anonymous")) {
-			this.driver.get("http://localhost:8050/Acme-Planner/administrator/spam/show?language=en&debug=true");
+			this.driver.get("http://localhost:8050/Acme-Work-Plans/administrator/spam/show?language=en&debug=true");
 			super.checkErrorsExist();
 		}else {
 			super.signIn(credentialsUsername, credentialsPassword);
-			this.driver.get("http://localhost:8050/Acme-Planner/administrator/spam/show?language=en&debug=true");
+			this.driver.get("http://localhost:8050/Acme-Work-Plans/administrator/spam/show?language=en&debug=true");
 			super.checkErrorsExist();
 			super.signOut();
 		}

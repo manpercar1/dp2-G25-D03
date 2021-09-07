@@ -37,7 +37,7 @@ public class ManagerTaskDeleteTests extends AcmePlannerTest{
 	public void deleteNegative(final String id) {
 		super.signIn("manager2", "manager2");
 		
-		this.driver.get("http://localhost:8050/Acme-Planner/manageracc/task/delete?language=en&debug=true&id=" + id);
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/manageracc/task/delete?language=en&debug=true&id=" + id);
 		super.checkErrorsExist();
 		
 		super.signOut();

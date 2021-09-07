@@ -122,7 +122,7 @@ public class AuthenticatedTaskListAndShowTests extends AcmePlannerTest{
 	@Order(14)
 	public void listNegative(final String id) {
 		super.signIn("authenticated1", "authenticated1");
-		this.driver.get("http://localhost:8050/Acme-Planner/authenticated/task/list?language=en&debug=true&" + id);
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/authenticated/task/list?language=en&debug=true&" + id);
 		super.checkErrorsExist();
 	}
 	
@@ -132,7 +132,7 @@ public class AuthenticatedTaskListAndShowTests extends AcmePlannerTest{
 	@Order(15)
 	public void listNegativeSortByExecution(final String id) {
 		super.signIn("authenticated1", "authenticated1");
-		this.driver.get("http://localhost:8050/Acme-Planner/authenticated/task/list-sorted-by-execution-period?language=en&debug=true&" + id);
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/authenticated/task/list-sorted-by-execution-period?language=en&debug=true&" + id);
 		super.checkErrorsExist();
 	}
 	
@@ -142,7 +142,7 @@ public class AuthenticatedTaskListAndShowTests extends AcmePlannerTest{
 	@Order(16)
 	public void listNegativeSortByWorkload(final String id) {
 		super.signIn("authenticated1", "authenticated1");
-		this.driver.get("http://localhost:8050/Acme-Planner/authenticated/task/list-sorted-by-workload?language=en&debug=true&" + id);
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/authenticated/task/list-sorted-by-workload?language=en&debug=true&" + id);
 		super.checkErrorsExist();
 	}
 
@@ -152,7 +152,7 @@ public class AuthenticatedTaskListAndShowTests extends AcmePlannerTest{
 	@Order(17)
 	public void showNegative(final String id) {
 		super.signIn("authenticated1", "authenticated1");
-		this.driver.get("http://localhost:8050/Acme-Planner/authenticated/task/show?" + id + "&language=en&debug=true&");
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/authenticated/task/show?" + id + "&language=en&debug=true&");
 		super.checkErrorsExist();
 	}
 }
