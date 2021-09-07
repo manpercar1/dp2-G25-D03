@@ -91,6 +91,9 @@ public class AdministratorTaskCreateService implements AbstractCreateService<Adm
 
 		errors.state(request, !notSpamTitle, "title", "anonymous.shout.error.text");
 		errors.state(request, !notSpamDescription, "description", "anonymous.shout.error.text");
+		
+		errors.state(request, entity.getStartExecution() != null && this.checkAno(entity.getStartExecution()), "startExecution", "administrator.task.error.fecha");
+        errors.state(request, entity.getEndExecution() != null && this.checkAno(entity.getEndExecution()), "endExecution", "administrator.task.error.fecha");
 	}
 
 	@Override
@@ -140,4 +143,14 @@ public class AdministratorTaskCreateService implements AbstractCreateService<Adm
 		}
 		
 	}
+	
+	public boolean checkAno(final Date fecha) {
+        boolean result = true;
+        final String ano = String.valueOf(fecha.getYear());
+        if(ano.length() > 4) {
+            result = false;
+        }
+
+        return result;
+    }
 }
