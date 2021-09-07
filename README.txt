@@ -13,3 +13,5 @@ Version 2.0.0
 https://github.com/manpercar1/dp2-G25-D03.git
 
 This is Acme Work Plans, a project in D&T.
+
+Este proyecto es el proyecto del grupo G32 entregado en Junio. Se han realizado las modificaciones pertinentes para el entregable de Septiembre.
