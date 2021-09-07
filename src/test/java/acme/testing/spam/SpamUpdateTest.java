@@ -78,12 +78,12 @@ public class SpamUpdateTest extends AcmePlannerTest {
 	public void updateNotAuthorised(final String threshold, final String words, final String credentialsUsername, final String credentialsPassword) {
 		
 		if(credentialsUsername.contains("anonymous")) {
-			this.driver.get("http://localhost:8050/Acme-Planner/administrator/spam/update?language=en&debug=true&" + threshold + "&words=" + words.replaceAll("\"", ""));
+			this.driver.get("http://localhost:8050/Acme-Work-Plans/administrator/spam/update?language=en&debug=true&" + threshold + "&words=" + words.replaceAll("\"", ""));
 			super.checkErrorsExist();
 		}else {
 			
 			super.signIn(credentialsUsername, credentialsPassword);
-			this.driver.get("http://localhost:8050/Acme-Planner/administrator/spam/update?language=en&debug=true&" + threshold + "&words=" + words.replaceAll("\"", ""));
+			this.driver.get("http://localhost:8050/Acme-Work-Plans/administrator/spam/update?language=en&debug=true&" + threshold + "&words=" + words.replaceAll("\"", ""));
 			super.checkErrorsExist();
 			super.signOut();
 					

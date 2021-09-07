@@ -73,7 +73,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest {
 	@Order(12)
 	public void listTaskNegative() {
 		
-		this.driver.get("http://localhost:8050/Acme-Planner/administrator/task/list");
+		this.driver.get("http://localhost:8050/Acme-Work-Plans/administrator/task/list");
 		super.checkErrorsExist();
 		
 	}

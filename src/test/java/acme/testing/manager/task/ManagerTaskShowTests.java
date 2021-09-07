@@ -14,7 +14,7 @@ public class ManagerTaskShowTests extends AcmePlannerTest{
 		@Order(10)
 		public void showNegative(final String id) {
 			super.signIn("manager2", "manager2");
-			this.driver.get("http://localhost:8050/Acme-Planner/manageracc/task/show?language=en&debug=true&id=" + id);
+			this.driver.get("http://localhost:8050/Acme-Work-Plans/manageracc/task/show?language=en&debug=true&id=" + id);
 			super.checkErrorsExist();
 			
 			super.signOut();
