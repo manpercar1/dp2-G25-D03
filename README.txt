@@ -12,7 +12,7 @@ Version 2.0.0
 
 Enlace al repositorio: https://github.com/manpercar1/dp2-G25-D03.git
 
-Enlace a la release: https://github.com/manpercar1/dp2-G25-D03/releases/tag/v1.0.0
+Enlace a la release: https://github.com/manpercar1/dp2-G25-D03/releases/tag/v1.0.1
 
 This is Acme Work Plans, a project in D&T.
 
