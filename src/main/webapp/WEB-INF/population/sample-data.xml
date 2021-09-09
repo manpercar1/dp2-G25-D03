@@ -177,7 +177,7 @@
 		<property name="title" value="Customize header"/>
 		<property name="description" value="Try some cool stuff"/>
 		<property name="startExecution" value="2022/05/17 22:33"/>
-		<property name="endExecution" value="2023/05/20 7:46"/>
+		<property name="endExecution" value="2022/05/20 7:46"/>
 		<property name="workload" value="13.59"/>
 		<property name="info" value="http://www.example.org"/>
 		<property name="userAccount"> <ref bean="authenticatedUserAccount1"/></property>
@@ -189,7 +189,7 @@
 		<property name="title" value="Testing"/>
 		<property name="description" value="Try some cool stuff"/>
 		<property name="startExecution" value="2022/02/17 22:33"/>
-		<property name="endExecution" value="2023/03/20 7:46"/>
+		<property name="endExecution" value="2022/03/20 7:46"/>
 		<property name="workload" value="23.59"/>
 		<property name="info" value="http://www.example.org"/>
 		<property name="userAccount"> <ref bean="authenticatedUserAccount1"/></property>
